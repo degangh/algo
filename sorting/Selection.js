@@ -1,20 +1,36 @@
+
+arr = require('../input').arr()
+
+
 function SelectionSort(arr)
 {
+    var n = 0;
     for (let i = 0 ; i < arr.length; i++)
     {
         minIndex = i
+        swapped = false
         for (let m = i + 1; m < arr.length; m++)
         {
-            if (arr[m] < arr[minIndex]) {minIndex = m}
+            if (arr[m] < arr[minIndex]) 
+            {
+                minIndex = m
+                swapped = true      
+            }
+            n++;
+            console.log(i,n)
         }
-        let temp = arr[i]
-        arr[i] = arr[minIndex]
-        arr[minIndex] = temp
+        if (swapped)
+        {
+            let temp = arr[i]
+            arr[i] = arr[minIndex]
+            arr[minIndex] = temp
+        }
+        
     }
+
+    return n
 }
 
-arr = [9,8,7,6,5];
+o = SelectionSort(arr);
 
-SelectionSort(arr);
-
-console.log(arr)
+console.log(arr , o)

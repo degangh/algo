@@ -1,1 +1,0 @@
-console.log('algorithm practice 2019')

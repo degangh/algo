@@ -1,5 +1,7 @@
 
 
+arr = require('../input').arr()
+
 function bubbleSort(arr)
 {
     var swapped 
@@ -23,7 +25,6 @@ function bubbleSort(arr)
     return n;
 }
 
-var arr = [6,5,4,3,2,1]
 
 o = bubbleSort(arr)
 
